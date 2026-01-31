@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BATTS Senior 1-Star Tournament SundayApril 19th 2026 Entry Form</title>
+  <title>BATTS Senior 1-Star Tournament April 19th 2026 Entry Form</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Stripe JS -->
   <script src="https://js.stripe.com/v3/"></script>
@@ -52,26 +52,25 @@
   <div id="success-message" style="display: none; background-color: #4CAF50; color: white; text-align: center; padding: 20px; margin: 20px auto; max-width: 800px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">Your entry has been successfully submitted! To secure your place in the Batts 1-Star tournament, please complete the bank transfer. Thank you, and good luck!</div>
   
   <div class="form-container">
-    <h1 style="color: #FFFFFF;">BATTS Senior Open 1-Star Tournament<br>Sunday 19th April 2026<br>Sponsored by Bribar</h1>
+    <h1 style="color: #FFFFFF;">BATTS 🏓 Senior 1-Star Tournament<br>Sunday 19 April 2026
+      <br>Do not Complete waiting approval from TTE</h1>
 
     <form id="entryForm">
       <!-- Section 1: Info -->
       <div class="form-section active">
         <div class="info-text">
-          <p><strong>Tournament entry form</strong></p>
-          <p>This form is quick and paperless, but please:</p>
+          <p><strong>On-line Paperless Entry Form</strong></p>
           <ul>
             <li>Read all details carefully before starting</li>
-            <li>There is  no age limitation</li>
-            <li>Make sure you <strong>press SUBMIT</strong> at the end</li>
-            <li>Complete payment after submission to confirm your entry</li>
+            <li>There are no age limitations to senior tournaments</li>
+            <li>Have your credit/debit card ready for payment</li>
           </ul>
           <p><strong>Event details:</strong></p>
           <div style="border-top: 1px solid #deecde; margin: 16px 0;"></div>
           <ul>
             <li>The tournament is approved by TTE and Essex County TTA</li>
-            <li>Tournament date: Sunday 19th April 2026</li>
-            <li>Entry closing date: Wednesday 15th April at 10pm</li>
+            <li>Tournament date: Sunday 19 April 2026</li>
+            <li>Entry closing date: Wednesday 15 April at 10pm</li>
             <li>Venue: BATTS TT Club, Norman Booth Centre, Elderfield, Mulberry Green, Old Harlow, Essex CM17 0EY</li>
             <li>Referee: Neil Brierley (TO2 qualification)</li>
             <li>Organiser: Carl Johnson (BATTS communications manager)  Tel: 07469 844024, Email: <a href="mailto:carl.johnson.batts@gmail.com">carl.johnson.batts@gmail.com</a></li>
@@ -87,7 +86,7 @@
           <p>£33.00</p>
           <p>Maximum 36 entries accepted in order of receipt and payment</p>
           <p>The tournament runs all day (approx. 9:15am to 5:30pm), players must be available for morning and afternoon sessions, venue opens at 8:15am for registration & practice (play starts 9:20am)</p>
-          <p>Under 18s must be accompanied by an adult, the draw will be made on 17th April but not published in advance</p>
+          <p>Under 18s must be accompanied by an adult, the draw will be made on Friday 17 April but not published in advance</p>
           <p>Refreshments and food are available to purchase from our cafeteria using cash or card</p>
           <p>Are you new to playing in tournaments? If so, here is a link to the Table Tennis England website where you can find lots of useful information. <a href="https://www.tabletennisengland.co.uk/compete/">Start competing - Table Tennis England</a></p>
         </div>
@@ -250,12 +249,16 @@
 
         <div style="background-color: rgba(76, 175, 80, 0.1); border: 2px solid #4CAF50; border-radius: 8px; padding: 15px; margin: 20px 0; text-align: center;">
           <p style="font-size: 16px; margin: 5px 0; color: #4CAF50; font-weight: bold;">Ready to Submit and Pay?</p>
-          <p style="font-size: 14px; margin: 10px 0; color: #ccc; line-height: 1.4;">Submit and Pay will take you to a secure payment page.</p>
-          <p style="font-size: 14px; margin: 5px 0; color: #ccc; line-height: 1.4;">Entry fee is £33 plus £1 booking fee = £34 total</p>
-          <p style="font-size: 14px; margin: 5px 0; color: #ccc;">Please ensure all information is correct before submitting.</p>
+          <p style="font-size: 14px; margin: 10px 0; color: #ccc; line-height: 1.4;">When you click Submit and Pay, you will be securely redirected to our Stripe payment page, where your payment details will be protected by industry-standard encryption.</p>
+          <p style="font-size: 14px; margin: 5px 0; color: #ccc; line-height: 1.4;">Total due: £33 entry fee + £1 booking fee = £34</p>
+          <p style="font-size: 14px; margin: 5px 0; color: #ccc;">Please review your information carefully before proceeding. Once submitted, your payment will be processed securely.</p>
         </div>
-          
-        <input type="submit" id="submitBtn" value="Submit and Pay">
+        
+        <!-- Enable or disable submit button here -->
+
+         <!-- To ENABLE submit button change the line below no need to add true or enabled: -->
+         <!-- <input type="submit" id="submitBtn" value="Submit and Pay"> -->
+         <input type="submit" id="submitBtn" value="Submit and Pay" disabled>
         <!-- Design credit -->
         <div style="text-align: center; margin-top: 20px; padding: 10px; font-size: 12px; color: white; border-bottom: 1px solid rgba(255,255,255,0.2);">
           Form designed by: <a href="mailto:carl.johnson.batts@gmail.com" style="color: white; text-decoration: none;">carl.johnson.batts@gmail.com</a>
@@ -291,9 +294,9 @@
         successMessage.innerHTML = `
           <h2 style="margin: 0 0 10px 0;">🎉 Payment Successful!</h2>
           <p style="margin: 5px 0;">Your tournament entry has been successfully submitted and paid for.</p>
-          <p style="margin: 5px 0;">You will receive a confirmation email shortly.</p>
-          <p style="margin: 5px 0; font-size: 14px;">Session ID: ${sessionId || 'N/A'}</p>
+          <p style="margin: 5px 0;">A confimation Email has been sent to the email address you provided.</p>
           <p style="margin: 10px 0 0 0; font-weight: bold;">Thank you for entering the BATTS Senior 1-Star Tournament!</p>
+          <p style="margin: 10px 0 0 0; font-weight: bold;">A Table Tennis England Tournament.</p>
         `;
         
         // Hide the form
